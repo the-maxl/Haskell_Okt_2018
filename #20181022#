@@ -22,17 +22,15 @@ Prelude> sumList [4,5,8]
 0
 
 
--- Fakultät berechnen: (20181022)
-fac x = if x == 0 then 1 else x * fac (x -1)
 
-
--- Fibonacci-Folge:
- fibo x = if x == 0 then 0 else (if x == 1 then 1 else (fibo (x-2) + fibo (x-1)))
 Prelude> fibo 4
 3
 
 -- Elemente einer Liste summieren:  LÄNGE 0 UND 1 BERÜCKSICHTIGEN!
-sumList x = if length x == 2 then head x + last x else (head x + sumList (tail x))
+sumList x = if length x == 2
+  then head x + last x
+  else (head x + sumList (tail x))
+  
 Prelude> sumList [1,2,3]
 6
 Prelude> sumList [1,2,3,4]
